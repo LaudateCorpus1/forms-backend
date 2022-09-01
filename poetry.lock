@@ -168,14 +168,14 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pydantic"
-version = "1.8.1"
-description = "Data validation and settings management using python 3.6 type hinting"
+version = "1.10.1"
+description = "Data validation and settings management using python type hints"
 category = "main"
 optional = false
-python-versions = ">=3.6.1"
+python-versions = ">=3.7"
 
 [package.dependencies]
-typing-extensions = ">=3.7.4.3"
+typing-extensions = ">=4.1.0"
 
 [package.extras]
 dotenv = ["python-dotenv (>=0.10.4)"]
@@ -199,9 +199,9 @@ python-versions = ">=3.6"
 
 [package.extras]
 crypto = ["cryptography (>=3.3.1,<4.0.0)"]
-dev = ["sphinx", "sphinx-rtd-theme", "zope.interface", "cryptography (>=3.3.1,<4.0.0)", "pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)", "mypy", "pre-commit"]
+dev = ["coverage[toml] (==5.0.4)", "cryptography (>=3.3.1,<4.0.0)", "mypy", "pre-commit", "pytest (>=6.0.0,<7.0.0)", "sphinx", "sphinx-rtd-theme", "zope.interface"]
 docs = ["sphinx", "sphinx-rtd-theme", "zope.interface"]
-tests = ["pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)"]
+tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
 
 [[package]]
 name = "pymongo"
@@ -242,7 +242,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
 [[package]]
 name = "rfc3986"
-version = "1.4.0"
+version = "1.5.0"
 description = "Validating URI References per RFC 3986"
 category = "main"
 optional = false
@@ -274,8 +274,8 @@ celery = ["celery (>=3)"]
 chalice = ["chalice (>=1.16.0)"]
 django = ["django (>=1.8)"]
 falcon = ["falcon (>=1.4)"]
-flask = ["flask (>=0.11)", "blinker (>=1.1)"]
-pure_eval = ["pure-eval", "executing", "asttokens"]
+flask = ["blinker (>=1.1)", "flask (>=0.11)"]
+pure_eval = ["asttokens", "executing", "pure-eval"]
 pyspark = ["pyspark (>=2.4.4)"]
 rq = ["rq (>=0.6)"]
 sanic = ["sanic (>=0.8)"]
@@ -302,7 +302,7 @@ python-versions = ">=3.6"
 pydantic = ">=1.2"
 
 [package.extras]
-dev = ["pytest (>=6)", "flake8 (>=3.8)", "black (>=20.8b1)", "isort (>=5.6)", "autoflake (>=1.4)"]
+dev = ["autoflake (>=1.4)", "black (>=20.8b1)", "flake8 (>=3.8)", "isort (>=5.6)", "pytest (>=6)"]
 falcon = ["falcon"]
 flask = ["flask"]
 starlette = ["starlette"]
@@ -320,11 +320,11 @@ full = ["aiofiles", "graphene", "itsdangerous", "jinja2", "python-multipart", "p
 
 [[package]]
 name = "typing-extensions"
-version = "3.7.4.3"
-description = "Backported and Experimental Type Hints for Python 3.5+"
+version = "4.3.0"
+description = "Backported and Experimental Type Hints for Python 3.7+"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 
 [[package]]
 name = "urllib3"
@@ -336,7 +336,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
 
 [package.extras]
 brotli = ["brotlipy (>=0.6.0)"]
-secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
+secure = ["certifi", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "ipaddress", "pyOpenSSL (>=0.14)"]
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
@@ -359,7 +359,7 @@ watchgod = {version = ">=0.6", optional = true, markers = "extra == \"standard\"
 websockets = {version = ">=8.0.0,<9.0.0", optional = true, markers = "extra == \"standard\""}
 
 [package.extras]
-standard = ["websockets (>=8.0.0,<9.0.0)", "watchgod (>=0.6)", "python-dotenv (>=0.13)", "PyYAML (>=5.1)", "httptools (>=0.1.0,<0.2.0)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "colorama (>=0.4)"]
+standard = ["PyYAML (>=5.1)", "colorama (>=0.4)", "httptools (>=0.1.0,<0.2.0)", "python-dotenv (>=0.13)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "watchgod (>=0.6)", "websockets (>=8.0.0,<9.0.0)"]
 
 [[package]]
 name = "uvloop"
@@ -370,9 +370,9 @@ optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-dev = ["Cython (>=0.29.20,<0.30.0)", "pytest (>=3.6.0)", "Sphinx (>=1.7.3,<1.8.0)", "sphinxcontrib-asyncio (>=0.2.0,<0.3.0)", "sphinx-rtd-theme (>=0.2.4,<0.3.0)", "aiohttp", "flake8 (>=3.8.4,<3.9.0)", "psutil", "pycodestyle (>=2.6.0,<2.7.0)", "pyOpenSSL (>=19.0.0,<19.1.0)", "mypy (>=0.800)"]
-docs = ["Sphinx (>=1.7.3,<1.8.0)", "sphinxcontrib-asyncio (>=0.2.0,<0.3.0)", "sphinx-rtd-theme (>=0.2.4,<0.3.0)"]
-test = ["aiohttp", "flake8 (>=3.8.4,<3.9.0)", "psutil", "pycodestyle (>=2.6.0,<2.7.0)", "pyOpenSSL (>=19.0.0,<19.1.0)", "mypy (>=0.800)"]
+dev = ["Cython (>=0.29.20,<0.30.0)", "Sphinx (>=1.7.3,<1.8.0)", "aiohttp", "flake8 (>=3.8.4,<3.9.0)", "mypy (>=0.800)", "psutil", "pyOpenSSL (>=19.0.0,<19.1.0)", "pycodestyle (>=2.6.0,<2.7.0)", "pytest (>=3.6.0)", "sphinx-rtd-theme (>=0.2.4,<0.3.0)", "sphinxcontrib-asyncio (>=0.2.0,<0.3.0)"]
+docs = ["Sphinx (>=1.7.3,<1.8.0)", "sphinx-rtd-theme (>=0.2.4,<0.3.0)", "sphinxcontrib-asyncio (>=0.2.0,<0.3.0)"]
+test = ["aiohttp", "flake8 (>=3.8.4,<3.9.0)", "mypy (>=0.800)", "psutil", "pyOpenSSL (>=19.0.0,<19.1.0)", "pycodestyle (>=2.6.0,<2.7.0)"]
 
 [[package]]
 name = "watchgod"
@@ -393,7 +393,7 @@ python-versions = ">=3.6.1"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "7d6369652edd127a9cf36c90fa244c1f4e257ca366ab6a6b9734fae0e70aa9fa"
+content-hash = "d57c4c1654bc0716e89279857b404a9a801d020593f3ed56fa890ec32f18d363"
 
 [metadata.files]
 certifi = [
@@ -421,6 +421,7 @@ flake8-annotations = [
     {file = "flake8_annotations-2.6.2-py3-none-any.whl", hash = "sha256:d10c4638231f8a50c0a597c4efce42bd7b7d85df4f620a0ddaca526138936a4f"},
 ]
 gunicorn = [
+    {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},
     {file = "gunicorn-20.1.0.tar.gz", hash = "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"},
 ]
 h11 = [
@@ -469,28 +470,42 @@ pycodestyle = [
     {file = "pycodestyle-2.7.0.tar.gz", hash = "sha256:c389c1d06bf7904078ca03399a4816f974a1d590090fecea0c63ec26ebaf1cef"},
 ]
 pydantic = [
-    {file = "pydantic-1.8.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:0c40162796fc8d0aa744875b60e4dc36834db9f2a25dbf9ba9664b1915a23850"},
-    {file = "pydantic-1.8.1-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:fff29fe54ec419338c522b908154a2efabeee4f483e48990f87e189661f31ce3"},
-    {file = "pydantic-1.8.1-cp36-cp36m-manylinux2014_i686.whl", hash = "sha256:fbfb608febde1afd4743c6822c19060a8dbdd3eb30f98e36061ba4973308059e"},
-    {file = "pydantic-1.8.1-cp36-cp36m-manylinux2014_x86_64.whl", hash = "sha256:eb8ccf12295113ce0de38f80b25f736d62f0a8d87c6b88aca645f168f9c78771"},
-    {file = "pydantic-1.8.1-cp36-cp36m-win_amd64.whl", hash = "sha256:20d42f1be7c7acc352b3d09b0cf505a9fab9deb93125061b376fbe1f06a5459f"},
-    {file = "pydantic-1.8.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:dde4ca368e82791de97c2ec019681ffb437728090c0ff0c3852708cf923e0c7d"},
-    {file = "pydantic-1.8.1-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:3bbd023c981cbe26e6e21c8d2ce78485f85c2e77f7bab5ec15b7d2a1f491918f"},
-    {file = "pydantic-1.8.1-cp37-cp37m-manylinux2014_i686.whl", hash = "sha256:830ef1a148012b640186bf4d9789a206c56071ff38f2460a32ae67ca21880eb8"},
-    {file = "pydantic-1.8.1-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:fb77f7a7e111db1832ae3f8f44203691e15b1fa7e5a1cb9691d4e2659aee41c4"},
-    {file = "pydantic-1.8.1-cp37-cp37m-win_amd64.whl", hash = "sha256:3bcb9d7e1f9849a6bdbd027aabb3a06414abd6068cb3b21c49427956cce5038a"},
-    {file = "pydantic-1.8.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:2287ebff0018eec3cc69b1d09d4b7cebf277726fa1bd96b45806283c1d808683"},
-    {file = "pydantic-1.8.1-cp38-cp38-manylinux1_i686.whl", hash = "sha256:4bbc47cf7925c86a345d03b07086696ed916c7663cb76aa409edaa54546e53e2"},
-    {file = "pydantic-1.8.1-cp38-cp38-manylinux2014_i686.whl", hash = "sha256:6388ef4ef1435364c8cc9a8192238aed030595e873d8462447ccef2e17387125"},
-    {file = "pydantic-1.8.1-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:dd4888b300769ecec194ca8f2699415f5f7760365ddbe243d4fd6581485fa5f0"},
-    {file = "pydantic-1.8.1-cp38-cp38-win_amd64.whl", hash = "sha256:8fbb677e4e89c8ab3d450df7b1d9caed23f254072e8597c33279460eeae59b99"},
-    {file = "pydantic-1.8.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:2f2736d9a996b976cfdfe52455ad27462308c9d3d0ae21a2aa8b4cd1a78f47b9"},
-    {file = "pydantic-1.8.1-cp39-cp39-manylinux1_i686.whl", hash = "sha256:3114d74329873af0a0e8004627f5389f3bb27f956b965ddd3e355fe984a1789c"},
-    {file = "pydantic-1.8.1-cp39-cp39-manylinux2014_i686.whl", hash = "sha256:258576f2d997ee4573469633592e8b99aa13bda182fcc28e875f866016c8e07e"},
-    {file = "pydantic-1.8.1-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:c17a0b35c854049e67c68b48d55e026c84f35593c66d69b278b8b49e2484346f"},
-    {file = "pydantic-1.8.1-cp39-cp39-win_amd64.whl", hash = "sha256:e8bc082afef97c5fd3903d05c6f7bb3a6af9fc18631b4cc9fedeb4720efb0c58"},
-    {file = "pydantic-1.8.1-py3-none-any.whl", hash = "sha256:e3f8790c47ac42549dc8b045a67b0ca371c7f66e73040d0197ce6172b385e520"},
-    {file = "pydantic-1.8.1.tar.gz", hash = "sha256:26cf3cb2e68ec6c0cfcb6293e69fb3450c5fd1ace87f46b64f678b0d29eac4c3"},
+    {file = "pydantic-1.10.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:221166d99726238f71adc4fa9f3e94063a10787574b966f86a774559e709ac5a"},
+    {file = "pydantic-1.10.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:a90e85d95fd968cd7cae122e0d3e0e1f6613bc88c1ff3fe838ac9785ea4b1c4c"},
+    {file = "pydantic-1.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f2157aaf5718c648eaec9e654a34179ae42ffc363dc3ad058538a4f3ecbd9341"},
+    {file = "pydantic-1.10.1-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:6142246fc9adb51cadaeb84fb52a86f3adad4c6a7b0938a5dd0b1356b0088217"},
+    {file = "pydantic-1.10.1-cp310-cp310-musllinux_1_1_i686.whl", hash = "sha256:60dad97a09b6f44690c05467a4f397b62bfc2c839ac39102819d6979abc2be0d"},
+    {file = "pydantic-1.10.1-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:d6f5bcb59d33ec46621dae76e714c53035087666cac80c81c9047a84f3ff93d0"},
+    {file = "pydantic-1.10.1-cp310-cp310-win_amd64.whl", hash = "sha256:522906820cd60e63c7960ba83078bf2d2ad2dd0870bf68248039bcb1ec3eb0a4"},
+    {file = "pydantic-1.10.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:d545c89d88bdd5559db17aeb5a61a26799903e4bd76114779b3bf1456690f6ce"},
+    {file = "pydantic-1.10.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:ad2374b5b3b771dcc6e2f6e0d56632ab63b90e9808b7a73ad865397fcdb4b2cd"},
+    {file = "pydantic-1.10.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:90e02f61b7354ed330f294a437d0bffac9e21a5d46cb4cc3c89d220e497db7ac"},
+    {file = "pydantic-1.10.1-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:cc5ffe7bd0b4778fa5b7a5f825c52d6cfea3ae2d9b52b05b9b1d97e36dee23a8"},
+    {file = "pydantic-1.10.1-cp311-cp311-musllinux_1_1_i686.whl", hash = "sha256:7acb7b66ffd2bc046eaff0063df84c83fc3826722d5272adaeadf6252e17f691"},
+    {file = "pydantic-1.10.1-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:7e6786ed5faa559dea5a77f6d2de9a08d18130de9344533535d945f34bdcd42e"},
+    {file = "pydantic-1.10.1-cp311-cp311-win_amd64.whl", hash = "sha256:c7bf8ff1d18186eb0cbe42bd9bfb4cbf7fde1fd01b8608925458990c21f202f0"},
+    {file = "pydantic-1.10.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:14a5babda137a294df7ad5f220986d79bbb87fdeb332c6ded61ce19da7f5f3bf"},
+    {file = "pydantic-1.10.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5659cb9c6b3d27fc0067025c4f5a205f5e838232a4a929b412781117c2343d44"},
+    {file = "pydantic-1.10.1-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:c8d70fb91b03c32d2e857b071a22a5225e6b625ca82bd2cc8dd729d88e0bd200"},
+    {file = "pydantic-1.10.1-cp37-cp37m-musllinux_1_1_i686.whl", hash = "sha256:9a93be313e40f12c6f2cb84533b226bbe23d0774872e38d83415e6890215e3a6"},
+    {file = "pydantic-1.10.1-cp37-cp37m-musllinux_1_1_x86_64.whl", hash = "sha256:d55aeb01bb7bd7c7e1bd904668a4a2ffcbb1c248e7ae9eb40a272fd7e67dd98b"},
+    {file = "pydantic-1.10.1-cp37-cp37m-win_amd64.whl", hash = "sha256:43d41b6f13706488e854729955ba8f740e6ec375cd16b72b81dc24b9d84f0d15"},
+    {file = "pydantic-1.10.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:f31ffe0e38805a0e6410330f78147bb89193b136d7a5f79cae60d3e849b520a6"},
+    {file = "pydantic-1.10.1-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:8eee69eda7674977b079a21e7bf825b59d8bf15145300e8034ed3eb239ac444f"},
+    {file = "pydantic-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6f927bff6c319fc92e0a2cbeb2609b5c1cd562862f4b54ec905e353282b7c8b1"},
+    {file = "pydantic-1.10.1-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:eb1bc3f8fef6ba36977108505e90558911e7fbccb4e930805d5dd90891b56ff4"},
+    {file = "pydantic-1.10.1-cp38-cp38-musllinux_1_1_i686.whl", hash = "sha256:96ab6ce1346d14c6e581a69c333bdd1b492df9cf85ad31ad77a8aa42180b7e09"},
+    {file = "pydantic-1.10.1-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:444cf220a12134da1cd42fe4f45edff622139e10177ce3d8ef2b4f41db1291b2"},
+    {file = "pydantic-1.10.1-cp38-cp38-win_amd64.whl", hash = "sha256:dbfbff83565b4514dd8cebc8b8c81a12247e89427ff997ad0a9da7b2b1065c12"},
+    {file = "pydantic-1.10.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:5327406f4bfd5aee784e7ad2a6a5fdd7171c19905bf34cb1994a1ba73a87c468"},
+    {file = "pydantic-1.10.1-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:1072eae28bf034a311764c130784e8065201a90edbca10f495c906737b3bd642"},
+    {file = "pydantic-1.10.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ce901335667a68dfbc10dd2ee6c0d676b89210d754441c2469fbc37baf7ee2ed"},
+    {file = "pydantic-1.10.1-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:54d6465cd2112441305faf5143a491b40de07a203116b5755a2108e36b25308d"},
+    {file = "pydantic-1.10.1-cp39-cp39-musllinux_1_1_i686.whl", hash = "sha256:2b5e5e7a0ec96704099e271911a1049321ba1afda92920df0769898a7e9a1298"},
+    {file = "pydantic-1.10.1-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:ae43704358304da45c1c3dd7056f173c618b252f91594bcb6d6f6b4c6c284dee"},
+    {file = "pydantic-1.10.1-cp39-cp39-win_amd64.whl", hash = "sha256:2d7da49229ffb1049779a5a6c1c50a26da164bd053cf8ee9042197dc08a98259"},
+    {file = "pydantic-1.10.1-py3-none-any.whl", hash = "sha256:f8b10e59c035ff3dcc9791619d6e6c5141e0fa5cbe264e19e267b8d523b210bf"},
+    {file = "pydantic-1.10.1.tar.gz", hash = "sha256:d41bb80347a8a2d51fbd6f1748b42aca14541315878447ba159617544712f770"},
 ]
 pyflakes = [
     {file = "pyflakes-2.3.1-py2.py3-none-any.whl", hash = "sha256:7893783d01b8a89811dd72d7dfd4d84ff098e5eed95cfa8905b22bbffe52efc3"},
@@ -602,8 +617,8 @@ pyyaml = [
     {file = "PyYAML-5.4.1.tar.gz", hash = "sha256:607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e"},
 ]
 rfc3986 = [
-    {file = "rfc3986-1.4.0-py2.py3-none-any.whl", hash = "sha256:af9147e9aceda37c91a05f4deb128d4b4b49d6b199775fd2d2927768abdc8f50"},
-    {file = "rfc3986-1.4.0.tar.gz", hash = "sha256:112398da31a3344dc25dbf477d8df6cb34f9278a94fee2625d89e4514be8bb9d"},
+    {file = "rfc3986-1.5.0-py2.py3-none-any.whl", hash = "sha256:a86d6e1f5b1dc238b218b012df0aa79409667bb209e58da56d0b94704e712a97"},
+    {file = "rfc3986-1.5.0.tar.gz", hash = "sha256:270aaf10d87d0d4e095063c65bf3ddbc6ee3d0b226328ce21e036f946e421835"},
 ]
 sentry-sdk = [
     {file = "sentry-sdk-1.0.0.tar.gz", hash = "sha256:71de00c9711926816f750bc0f57ef2abbcb1bfbdf5378c601df7ec978f44857a"},
@@ -622,9 +637,8 @@ starlette = [
     {file = "starlette-0.14.2.tar.gz", hash = "sha256:7d49f4a27f8742262ef1470608c59ddbc66baf37c148e938c7038e6bc7a998aa"},
 ]
 typing-extensions = [
-    {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},
-    {file = "typing_extensions-3.7.4.3-py3-none-any.whl", hash = "sha256:7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"},
-    {file = "typing_extensions-3.7.4.3.tar.gz", hash = "sha256:99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c"},
+    {file = "typing_extensions-4.3.0-py3-none-any.whl", hash = "sha256:25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02"},
+    {file = "typing_extensions-4.3.0.tar.gz", hash = "sha256:e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"},
 ]
 urllib3 = [
     {file = "urllib3-1.26.3-py2.py3-none-any.whl", hash = "sha256:1b465e494e3e0d8939b50680403e3aedaa2bc434b7d5af64dfd3c958d7f5ae80"},
